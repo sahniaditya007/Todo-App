@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Todo App</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Main Todo Application -->
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <h1><i class="fas fa-tasks"></i> TaskFlow</h1>
+                <div class="header-actions">
+                    <div class="user-profile">
+                        <img id="user-avatar" class="user-avatar" src="" alt="User Avatar">
+                        <span id="user-name" class="user-name"></span>
+                    </div>
+                    <button id="logout-btn" class="btn btn-secondary">
+                        <i class="fas fa-sign-out-alt"></i> Sign Out
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="container">
+                <!-- Task Input -->
+                <div class="task-input-section">
+                    <div class="task-input-container">
+                        <input type="text" id="task-input" placeholder="What needs to be done?" class="task-input">
+                        <button id="add-task-btn" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Add Task
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Task Stage Management -->
+                <div class="task-stages">
+                    <div class="stage-column" data-stage="todo">
+                        <div class="stage-header">
+                            <h3><i class="fas fa-clock"></i> Todo</h3>
+                            <span class="task-counter" id="todo-counter">0</span>
+                        </div>
+                        <div class="stage-tasks" id="todo-tasks">
+                            <!-- Todo tasks will be dynamically inserted here -->
+                        </div>
+                    </div>
+                    
+                    <div class="stage-column" data-stage="completed">
+                        <div class="stage-header">
+                            <h3><i class="fas fa-check-circle"></i> Completed</h3>
+                            <span class="task-counter" id="completed-counter">0</span>
+                        </div>
+                        <div class="stage-tasks" id="completed-tasks">
+                            <!-- Completed tasks will be dynamically inserted here -->
+                        </div>
+                    </div>
+                    
+                    <div class="stage-column" data-stage="archived">
+                        <div class="stage-header">
+                            <h3><i class="fas fa-archive"></i> Archived</h3>
+                            <span class="task-counter" id="archived-counter">0</span>
+                        </div>
+                        <div class="stage-tasks" id="archived-tasks">
+                            <!-- Archived tasks will be dynamically inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/todo-app.js"></script>
+</body>
+</html>
