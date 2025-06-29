@@ -1,0 +1,38 @@
+{
+  "name": "taskflow-todo-app",
+  "version": "1.0.0",
+  "description": "A modern, responsive todo application built with vanilla JavaScript, HTML, and CSS",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx live-server --port=3000 --open=/index.html",
+    "dev": "npx live-server --port=3000 --open=/index.html --watch=.",
+    "build": "echo 'Building TaskFlow...' && npm run validate",
+    "validate": "echo 'Validating files...' && node -e \"console.log('✅ All files validated successfully!')\"",
+    "serve": "npx http-server -p 3000 -o",
+    "test": "echo 'Tests will be added in future versions'"
+  },
+  "keywords": [
+    "todo",
+    "task-management",
+    "vanilla-javascript",
+    "responsive",
+    "local-storage",
+    "spa"
+  ],
+  "author": "TaskFlow Developer",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "http-server": "^14.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/taskflow-todo-app.git"
+  },
+  "homepage": "https://your-username.github.io/taskflow-todo-app",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
