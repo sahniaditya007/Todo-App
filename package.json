@@ -6,10 +6,9 @@
   "scripts": {
     "start": "npx live-server --port=3000 --open=/index.html",
     "dev": "npx live-server --port=3000 --open=/index.html --watch=.",
-    "build": "echo 'Building TaskFlow...' && npm run validate",
-    "validate": "echo 'Validating files...' && node -e \"console.log('✅ All files validated successfully!')\"",
     "serve": "npx http-server -p 3000 -o",
-    "test": "echo 'Tests will be added in future versions'"
+    "test": "echo 'Tests will be added in future versions'",
+    "deploy": "vercel --prod"
   },
   "keywords": [
     "todo",
